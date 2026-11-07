@@ -53,3 +53,9 @@
 - [x] **Task 10: Emoji callout**
 
   - Render a blockquote that starts with an emoji as a callout panel. Leave other blockquotes as quotations.
+
+- [x] **Task 11: Include essay text in the production build**
+
+  - Read `content/*.md` from disk so the deployed pages get the title and body.
+
+  - Keep the development file watch, and trace the Markdown files into the Vercel deployment.

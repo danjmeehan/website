@@ -36,7 +36,7 @@
 
 ## 3. Data Flow & Component Hierarchy
 
-* `content/` directory holds `.md` files with front-matter. `lib/essays.ts` imports them with `import.meta.glob`, so saving a content file in `next dev` hot-reloads the open page. Production still caches the parsed essays.
+* `content/` directory holds `.md` files with front-matter. `lib/essays.ts` reads those files from disk, and the production build traces `content/**/*.md` so the essay text is included on Vercel. In development, `import.meta.glob` also watches the files so a save hot-reloads the open page. Production caches the parsed essays.
 
 * `public/images/` holds static assets.
 

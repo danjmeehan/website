@@ -4,6 +4,10 @@ const nextConfig: NextConfig = {
   agentRules: false,
   cacheComponents: true,
   partialPrefetching: true,
+  outputFileTracingIncludes: {
+    "/": ["./content/**/*.md"],
+    "/writing/[slug]": ["./content/**/*.md"],
+  },
   turbopack: {
     rules: {
       "*.css": {
