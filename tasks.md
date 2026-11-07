@@ -59,3 +59,9 @@
   - Read `content/*.md` from disk so the deployed pages get the title and body.
 
   - Keep the development file watch, and trace the Markdown files into the Vercel deployment.
+
+- [x] **Task 12: Browser tab**
+
+  - Set the tab title to `danjmeehan`.
+
+  - Use the monocle emoji as the favicon.

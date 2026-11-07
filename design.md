@@ -12,6 +12,8 @@
 
 * **Deployment:** Vercel, mapped to custom domain managed via Squarespace Domains.
 
+* **Browser chrome:** The document title is `danjmeehan` on every page. `app/icon.png` is the monocle emoji, used as the favicon.
+
 ## 2. Page Structure & Routing
 
 * *`app/page.tsx` (Index / Home):**

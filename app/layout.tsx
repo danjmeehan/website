@@ -16,10 +16,7 @@ const newsreader = Newsreader({
 });
 
 export const metadata: Metadata = {
-  title: {
-    default: "Writing & Projects",
-    template: "%s",
-  },
+  title: "danjmeehan",
   description: site.bio,
 };
 

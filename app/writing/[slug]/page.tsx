@@ -18,10 +18,9 @@ export async function generateMetadata({
 }: EssayRouteProps): Promise<Metadata> {
   const { slug } = await params;
   const essay = await getEssay(slug);
-  if (!essay) return { title: "Not found" };
+  if (!essay) return {};
 
   return {
-    title: essay.title,
     description: essay.description || undefined,
   };
 }

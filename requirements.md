@@ -21,6 +21,7 @@
 ## 3. Non-Functional & Design Requirements
 
 * **Aesthetics:** Clean, restrained, and intentional. Avoid heavy corporate hero sections or multi-page bloat. Focus on typography, whitespace, and high readability.
+* **Browser chrome:** The tab title is `danjmeehan`. The favicon is the monocle emoji.
 * **Tech Stack:** Next.js (App Router), TypeScript, and Tailwind CSS.
 * **Content Management:** Static local Markdown files `.md`) to keep infrastructure lightweight with zero database overhead. Images stored in a public assets folder. Saving a content file during local development refreshes the open page.
 * **Deployment:** Hosted on Vercel, pointing to a custom domain managed via Squarespace Domains.
