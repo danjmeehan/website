@@ -32,7 +32,7 @@
 
 * *`app/writing/[slug]/page.tsx` (Essay View):**
 
-  * Dynamic route rendering individual Markdown essays.
+  * Dynamic route rendering individual Markdown essays. A Home link at the top returns to `/`.
 
   * Custom component mapping for `react-markdown` to ensure images `<img>`) are rendered responsibly with Tailwind max-widths and rounded borders.
 

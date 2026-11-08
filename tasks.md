@@ -85,3 +85,7 @@
 - [x] **Task 16: Match project preview height**
 
   - Give the project screenshots one 16:9 frame so Turnova is as tall as Writer.
+
+- [x] **Task 17: Home link on essays**
+
+  - Label the link at the top of an essay Home.
