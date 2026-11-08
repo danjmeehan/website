@@ -11,7 +11,7 @@
   * Opens directly on the Writing section. No visible hero or executive-bio heading. The Writing and Projects labels each have a small emoji to the left (✍️ and ✨).
   * The executive bio (Director of Product @ LexisNexis; bridging agile flow and enterprise governance) is the document meta description only, not page copy.
   * Features a clean list or tiled layout of long-form essays (starting with *Be Selfish for the Rest of Us*).
-  * Features a dedicated project showcase section highlighting the virtual running coach app (tech stack, AI/agentic development insights).
+  * Features a dedicated project showcase. Cards are spaced apart. A card links out when it has a URL, and shows a screenshot of the app above the title when an image is set.
   * Provides minimal footer links to external profiles (LinkedIn, GitHub, email), each with a small monochrome line icon to the left of the label.
 * **Dedicated Essay & Project View** `/writing/[slug]`**):**
   * Renders markdown-based essays into a distraction-free, beautifully formatted reading view.

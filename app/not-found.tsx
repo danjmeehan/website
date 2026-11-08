@@ -9,7 +9,7 @@ export default function NotFound() {
       <p className="mt-4 text-lg">
         <Link
           href="/"
-          className="underline decoration-rule underline-offset-4 hover:decoration-ink"
+          className="link-mark underline decoration-rule underline-offset-4 hover:decoration-ink"
         >
           Back to the index
         </Link>

@@ -58,7 +58,7 @@ function ProfileLabel({
       <span
         className={
           linked
-            ? "underline decoration-rule underline-offset-4 group-hover:decoration-ink"
+            ? "link-mark underline decoration-rule underline-offset-4 group-hover:decoration-ink"
             : undefined
         }
       >

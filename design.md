@@ -24,9 +24,11 @@
 
   * Featured Writing Section: Links to long-form essays. The "Writing" label is the page's `h1`, with a ✍️ mark to its left.
 
-  * Projects Section: Highlights virtual running coach app. The label has a ✨ mark to its left.
+  * Projects Section: Cards from `lib/projects.ts`, spaced apart. The label has a ✨ mark to its left. A card with `href` is an external link. A card with `image` shows that screenshot above the title, in a shared 16:9 frame so the previews are the same height. Turnova links to its help page and previews the main app. Writer previews the app and stays unlinked.
 
   * Footer: Links to LinkedIn, GitHub, and email. Each label has a `currentColor` line icon (`linkedin`, `github`, `email` on the link in `lib/site.ts`), rendered in `components/site-footer.tsx`. The same footer appears on essay pages.
+
+  * Hovering a link keeps its underline and fades a warm marker (`--mark`) behind the words. The marker is on the text, not the whole card.
 
 * *`app/writing/[slug]/page.tsx` (Essay View):**
 

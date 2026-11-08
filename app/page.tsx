@@ -23,7 +23,7 @@ export default async function Home() {
                   href={`/writing/${essay.slug}`}
                   className="group block py-5"
                 >
-                  <span className="text-xl tracking-tight underline decoration-transparent underline-offset-4 group-hover:decoration-ink">
+                  <span className="link-mark text-xl tracking-tight underline decoration-transparent underline-offset-4 group-hover:decoration-ink">
                     {essay.title}
                   </span>
                   {essay.description ? (
@@ -48,20 +48,54 @@ export default async function Home() {
           <span aria-hidden="true">✨</span>
           <span className="uppercase tracking-[0.18em]">Projects</span>
         </h2>
-        <ul className="mt-5">
-          {projects.map((project) => (
-            <li key={project.title}>
-              <article className="rounded-md border border-rule px-5 py-5 sm:px-6">
-                <h3 className="text-xl tracking-tight">{project.title}</h3>
-                <p className="mt-3 text-lg leading-relaxed">{project.summary}</p>
-                {project.stack ? (
-                  <p className="mt-4 font-sans text-sm text-muted">
-                    {project.stack}
-                  </p>
+        <ul className="mt-5 flex flex-col gap-5">
+          {projects.map((project) => {
+            const card = (
+              <article className="overflow-hidden rounded-md border border-rule">
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt=""
+                    className="aspect-video w-full border-b border-rule bg-[#221a21] object-contain object-top"
+                  />
                 ) : null}
+                <div className="px-5 py-5 sm:px-6">
+                  <h3 className="text-xl tracking-tight">
+                    {project.href ? (
+                      <span className="link-mark underline decoration-transparent underline-offset-4 group-hover:decoration-ink">
+                        {project.title}
+                      </span>
+                    ) : (
+                      project.title
+                    )}
+                  </h3>
+                  <p className="mt-3 text-lg leading-relaxed">{project.summary}</p>
+                  {project.stack ? (
+                    <p className="mt-4 font-sans text-sm text-muted">
+                      {project.stack}
+                    </p>
+                  ) : null}
+                </div>
               </article>
-            </li>
-          ))}
+            );
+
+            return (
+              <li key={project.title}>
+                {project.href ? (
+                  <a
+                    href={project.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group block"
+                  >
+                    {card}
+                  </a>
+                ) : (
+                  card
+                )}
+              </li>
+            );
+          })}
         </ul>
       </section>
     </div>

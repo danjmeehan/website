@@ -6,6 +6,7 @@
   --ink: #1c1916;
   --muted: #5e584f;
   --rule: #e3dbd0;
+  --mark: #f3d98a;
 }
 
 @theme inline {
@@ -26,6 +27,32 @@ body {
 a:focus-visible {
   outline: 2px solid var(--ink);
   outline-offset: 3px;
+}
+
+.link-mark,
+.prose a {
+  border-radius: 0.12em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  background-color: transparent;
+  box-shadow: 0.18em 0 0 transparent, -0.18em 0 0 transparent;
+  transition:
+    background-color 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.link-mark:hover,
+.group:hover .link-mark,
+.prose a:hover {
+  background-color: var(--mark);
+  box-shadow: 0.18em 0 0 var(--mark), -0.18em 0 0 var(--mark);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .link-mark,
+  .prose a {
+    transition: none;
+  }
 }
 
 .prose {

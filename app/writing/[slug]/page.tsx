@@ -46,7 +46,7 @@ export default async function EssayPage({ params }: EssayRouteProps) {
       <p className="font-sans text-sm">
         <Link
           href="/"
-          className="text-muted underline decoration-rule underline-offset-4 hover:text-ink hover:decoration-ink"
+          className="link-mark text-muted underline decoration-rule underline-offset-4 hover:text-ink hover:decoration-ink"
         >
           Index
         </Link>

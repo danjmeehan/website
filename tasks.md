@@ -65,3 +65,23 @@
   - Set the tab title to `danjmeehan`.
 
   - Use the monocle emoji as the favicon.
+
+- [x] **Task 13: Project card previews**
+
+  - Link a project card when it has a URL, and show a screenshot above the title when it has an image.
+
+  - Leave space between the project cards.
+
+- [x] **Task 14: Writer preview**
+
+  - Show a screenshot of the Writer app on its card.
+
+  - Leave the card unlinked.
+
+- [x] **Task 15: Link hover marker**
+
+  - Fade a warm highlight behind linked words on hover, and keep the underline.
+
+- [x] **Task 16: Match project preview height**
+
+  - Give the project screenshots one 16:9 frame so Turnova is as tall as Writer.
