@@ -6,7 +6,7 @@ A single-page index and Markdown essays. Content lives in `content/`. Images liv
 
 - Bio and footer links: `lib/site.ts`. Email should use a `mailto:` address. LinkedIn and GitHub need full `https://` URLs before those labels become links.
 - Project copy and stack: `lib/projects.ts`.
-- Essays: one `.md` file per piece in `content/`, with `title` and optional `description` and `date` in front matter. The filename is the URL slug.
+- Essays: one `.md` file per piece in `content/`, with `title` and optional `description`, `date` (`YYYY-MM` or `YYYY-MM-DD`), and `tags` in front matter. The filename is the URL slug.
 - Figures inside an essay: `![Alt text](/images/your-file.png)` or a remote `https` URL.
 
 ## Run locally

@@ -20,6 +20,7 @@ export type Essay = {
   title: string;
   description: string;
   date: string | null;
+  tags: string[];
   content: string;
 };
 
@@ -30,15 +31,36 @@ function essayPath(slug: string) {
   return resolved;
 }
 
+function monthStart(year: number, month: number): string | null {
+  if (month < 1 || month > 12) return null;
+  return new Date(Date.UTC(year, month - 1, 1)).toISOString();
+}
+
 function toIsoDate(value: unknown): string | null {
   if (value instanceof Date && !Number.isNaN(value.getTime())) {
-    return value.toISOString();
+    return monthStart(value.getUTCFullYear(), value.getUTCMonth() + 1);
   }
-  if (typeof value === "string" && value.trim()) {
-    const parsed = new Date(value);
-    if (!Number.isNaN(parsed.getTime())) return parsed.toISOString();
-  }
-  return null;
+  if (typeof value !== "string") return null;
+  const match = /^(\d{4})-(\d{2})(?:-\d{2})?$/.exec(value.trim());
+  if (!match) return null;
+  return monthStart(Number(match[1]), Number(match[2]));
+}
+
+function toTags(value: unknown): string[] {
+  if (!Array.isArray(value)) return [];
+  return value.flatMap((item) => {
+    if (typeof item !== "string") return [];
+    const tag = item.trim();
+    return tag ? [tag] : [];
+  });
+}
+
+export function formatEssayDate(iso: string) {
+  return new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(iso));
 }
 
 function readEssay(slug: string): Essay | null {
@@ -56,6 +78,7 @@ function readEssay(slug: string): Essay | null {
     description:
       typeof data.description === "string" ? data.description.trim() : "",
     date: toIsoDate(data.date),
+    tags: toTags(data.tags),
     content,
   };
 }

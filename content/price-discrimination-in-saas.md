@@ -1,6 +1,10 @@
 ---
 title: Price Discrimination in SAAS
 description: Pricing for software subscriptions is not like selling cars.
+date: 2020-11
+tags:
+  - price discrimination
+  - saas
 ---
 
 Based on feedback from my last post about [free software](/writing/be-selfish-for-the-rest-of-us), I'll keep writing about core microeconomic concepts and their applications to modern software. That's the good news!

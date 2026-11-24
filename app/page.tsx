@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { EssayMeta } from "@/components/essay-meta";
 import { getEssays } from "@/lib/essays";
 import { projects } from "@/lib/projects";
 
@@ -26,6 +27,11 @@ export default async function Home() {
                   <span className="link-mark text-xl tracking-tight underline decoration-transparent underline-offset-4 group-hover:decoration-ink">
                     {essay.title}
                   </span>
+                  <EssayMeta
+                    date={essay.date}
+                    tags={essay.tags}
+                    className="mt-1"
+                  />
                   {essay.description ? (
                     <span className="mt-1 block text-base leading-relaxed text-muted">
                       {essay.description}

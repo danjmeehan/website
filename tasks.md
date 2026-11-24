@@ -89,3 +89,15 @@
 - [x] **Task 17: Home link on essays**
 
   - Label the link at the top of an essay Home.
+
+- [x] **Task 18: Essay dates and tags**
+
+  - Read a month-and-year `date` and a `tags` list from essay front matter.
+
+  - Show them on the writing list and under the essay title. Tags are labels, not filters.
+
+- [x] **Task 19: Style essay tags**
+
+  - Place the tags on their own line under the date.
+
+  - Render each tag as a small rounded label.

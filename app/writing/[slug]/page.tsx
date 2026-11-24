@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { EssayMeta } from "@/components/essay-meta";
 import { MarkdownEssay } from "@/components/markdown-essay";
 import { getEssay, getEssays } from "@/lib/essays";
 
@@ -25,15 +26,6 @@ export async function generateMetadata({
   };
 }
 
-function formatDate(iso: string) {
-  return new Intl.DateTimeFormat("en-US", {
-    month: "long",
-    day: "numeric",
-    year: "numeric",
-    timeZone: "UTC",
-  }).format(new Date(iso));
-}
-
 export const instant = false;
 
 export default async function EssayPage({ params }: EssayRouteProps) {
@@ -55,11 +47,7 @@ export default async function EssayPage({ params }: EssayRouteProps) {
         <h1 className="text-4xl font-medium tracking-tight text-balance sm:text-5xl sm:leading-[1.1]">
           {essay.title}
         </h1>
-        {essay.date ? (
-          <p className="mt-4 font-sans text-sm text-muted">
-            <time dateTime={essay.date}>{formatDate(essay.date)}</time>
-          </p>
-        ) : null}
+        <EssayMeta date={essay.date} tags={essay.tags} className="mt-4" />
       </header>
       <div className="mt-10">
         <MarkdownEssay content={essay.content} />

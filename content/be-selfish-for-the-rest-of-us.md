@@ -1,6 +1,13 @@
 ---
 title: Be Selfish for the Rest of Us
 description: Open source, no code, free software, selfishness, and how we all benefit.
+date: 2020-03
+tags:
+  - open source
+  - rationale choice
+  - comparative advantage
+  - subscription economy
+
 ---
 
 Why does so much free software exist?

@@ -22,7 +22,7 @@
 
   * The executive bio in `lib/site.ts` is used only as the document meta description.
 
-  * Featured Writing Section: Links to long-form essays. The "Writing" label is the page's `h1`, with a ✍️ mark to its left.
+  * Featured Writing Section: Links to long-form essays. The "Writing" label is the page's `h1`, with a ✍️ mark to its left. When an essay has `date` or `tags` in front matter, the month and year sit under the title, and each tag is a small rounded label on the line below.
 
   * Projects Section: Cards from `lib/projects.ts`, spaced apart. The label has a ✨ mark to its left. A card with `href` is an external link. A card with `image` shows that screenshot above the title, in a shared 16:9 frame so the previews are the same height. Turnova links to its help page and previews the main app. Writer previews the app and stays unlinked.
 
@@ -32,7 +32,7 @@
 
 * *`app/writing/[slug]/page.tsx` (Essay View):**
 
-  * Dynamic route rendering individual Markdown essays. A Home link at the top returns to `/`.
+  * Dynamic route rendering individual Markdown essays. A Home link at the top returns to `/`. The same date line and tag labels appear under the essay title.
 
   * Custom component mapping for `react-markdown` to ensure images `<img>`) are rendered responsibly with Tailwind max-widths and rounded borders.
 
@@ -40,7 +40,7 @@
 
 ## 3. Data Flow & Component Hierarchy
 
-* `content/` directory holds `.md` files with front-matter. `lib/essays.ts` reads those files from disk, and the production build traces `content/**/*.md` so the essay text is included on Vercel. In development, `import.meta.glob` also watches the files so a save hot-reloads the open page. Production caches the parsed essays.
+* `content/` directory holds `.md` files with front-matter. Optional `date` is `YYYY-MM` or `YYYY-MM-DD`, shown as a month and year. Optional `tags` is a list of theme labels. `lib/essays.ts` reads those files from disk, and the production build traces `content/**/*.md` so the essay text is included on Vercel. In development, `import.meta.glob` also watches the files so a save hot-reloads the open page. Production caches the parsed essays.
 
 * `public/images/` holds static assets.
 
